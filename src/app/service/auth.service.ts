@@ -9,9 +9,9 @@ import { UserLogin } from '../model/UserLogin';
 })
 export class AuthService {
 
-  constructor(private http:HttpClient) {
-
-  }
+  constructor(
+    private http: HttpClient
+    ) {}
 
   entrar(userLogin: UserLogin): Observable<UserLogin> {
     return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin)
